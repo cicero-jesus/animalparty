@@ -17,5 +17,6 @@ class Adotante:
     def criancasEmCasa(self):
         self.__criancasEmCasa = criancasEmCasa
     
+    # Método de teste
     def exibir(self):
         return f"Ola {self.nome}, vc tem {self.criancasEmCasa}"
