@@ -5,10 +5,10 @@ A AnimalParty é um sistema de adoções de animais pensado para a resolução d
 # 📚 ESTRUTURA DE CLASSES
 | Classe| Atributos| Métodos| Relacionamentos|
 |:---|:---|:---|:---|
-| **Animal**          | id, especie, raca, nome, sexo, idadeMeses, porte (P/M/G), temperamento (lista), status, historicoEventos (lista), dataEntrada, dataAdocao | criar(), atualizar(), excluir(), registrarEvento(), alterarStatus(), calcularAdotabilidade(), colocarEmQuarentena(), marcarComoInadotavel() | Relacionado a Adotante (reservas/adoções), possui eventos de histórico, usado em Relatorio|
-| **Adotante**        | id, nome, idade, moradia, areaUtil, experienciaPets, criancasEmCasa, outrosAnimais, pontuacaoCompatibilidade, elegivel | criar(), atualizar(), excluir(), validarElegibilidade(), calcularCompatibilidade(), reservarAnimal(), adotarAnimal() | Relaciona-se com Animal (reserva/adoção), relacionado a Adotar_Devolver|
+| **Animal**          | id, especie, raca, nome, sexo, idadeMeses, porte (P/M/G), temperamento (lista), status, historicoEventos (lista), dataEntrada, dataAdocao | criar(), atualizar(), excluir(), registrarEvento(), alterarStatus(), calcularAdotabilidade(), Quarentena(), marcarComoInadotavel() | Relacionado a Adotante (reservas/adoções), possui eventos de histórico, usado em Relatorio|
+| **Adotante**        | id, nome, idade, moradia, areaUtil, experienciaPets, criancasEmCasa, outrosAnimais, ptsCompatib, elegivel | criar(), atualizar(), excluir(), validarElegibilidade(), calcularCompatibilidade(), reservarAnimal(), adotarAnimal(), adicionarHistorico, obterHistorico | Relaciona-se com Animal (reserva/adoção), relacionado a Adotar_Devolver|
 | **Relatorio**       | id, tipo, periodo, dadosGerados, filtros | gerarTop5Adotaveis(), gerarTaxaAdocaoPorEspecie(), gerarTaxaAdocaoPorPorte(), gerarTempoMedioEntradaAdocao(), gerarDevolucoesPorMotivo() | Usa dados de Animal, Adotante e Adotar_Devolver|
-| **Adotar_Devolver** | id, animalId, adotanteId, dataReserva, dataExpiracaoReserva, dataAdocao, dataDevolucao, motivoDevolucao, contrato, estrategiaTaxa | reservar(), expirarReserva(), efetivarAdocao(), gerarContrato(), calcularTaxa(), registrarDevolucao(), enviarNotificacaoProximoFila() | Liga Animal ↔ Adotante, gera eventos no histórico do animal, base para Relatorio|
+| **Adotar_Devolver** | id, animalId, adotanteId, dataReserva, dataExpiracaoReserva, dataAdocao, dataDevolucao, motivoDevolucao, contrato, estrategiaTaxa | reservar(), expirarReserva(), efetivarAdocao(), gerarContrato(), calcularTaxa(), registrarDevolucao(), enviarNotProxFila() | Liga Animal ↔ Adotante, gera eventos no histórico do animal, base para Relatorio|
 
 ----
 

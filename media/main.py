@@ -1,5 +1,13 @@
-from adotante import Adotante
+import adotante
+import adotar_devolver
+import req_relatorio
+import animal
 
-# instanciando
-# Ad = Adotante("Joao", "15", "sim")
-# print(Ad.exibir())
+""" Arquivo principal do módulo media, realiza as chamadas de outras classes, 
+    e é o arquivo principal para execução no teminal.
+    Classes disponíveis:
+    - Animal
+    - Adotante
+    - Adotar_Devolver
+    - Relatorio
+    """
