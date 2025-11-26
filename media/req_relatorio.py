@@ -41,6 +41,9 @@ class Relatorio:
     def dadosGerados(self, dados):
         self.__dadosGerados = dados
 
+    def gerarInfoAnimais(self):
+        pass
+    
     def gerarTop5Adotaveis(self):
         pass
 

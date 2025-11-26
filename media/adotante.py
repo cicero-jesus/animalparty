@@ -18,7 +18,7 @@ class Adotante:
     - ptsCompatib: pontuação de compatibilidade calculada
     - elegivel: indicador se o adotante é elegível para adoção
     """
-    def __init__(self, id, nome, idade, criancasEmCasa, moradia, areaUtil, experienciaPets, outrosAnimais, ptsCompatib, elegivel):
+    def __init__(self, id, nome, idade, criancasEmCasa, moradia, areaUtil, experienciaPets, outrosAnimais):
         self.id = id 
         self.__nome = nome
         self.idade = idade
@@ -27,9 +27,8 @@ class Adotante:
         self.areaUtil = areaUtil
         self.experienciaPets = experienciaPets
         self.outrosAnimais = outrosAnimais
-        self.ptsCompatib = ptsCompatib
-        self.elegivel = elegivel
-        pass
+        self.ptsCompatib =  None
+        self.elegivel = None
 
     @property
     def criancasEmCasa(self):
@@ -50,7 +49,9 @@ class Adotante:
         self.__nome = n
 
     def criar(self):
-        pass
+        print("Criando adotante...")
+        with open("p_adotante.json", "a") as file:
+            file.write(f"{self.id},{self.__nome},{self.idade},{self.__criancasEmCasa},{self.moradia},{self.areaUtil},{self.experienciaPets},{self.outrosAnimais},{self.ptsCompatib},{self.elegivel}\n")
     
     def atualizar(self):
         pass

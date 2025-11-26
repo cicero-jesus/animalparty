@@ -64,3 +64,15 @@ class Animal():
 
     def marcarComoInadotavel(self):
         pass
+
+class Cachorro(Animal):
+   def __init__(self, id, raca, nome, sexo, idadeMeses, porte, temperamento, status, historicoEventos=None, dataEntrada=None, dataAdocao=None):
+        # chamando o construtor da classe pai (Animal)
+        super().__init__(id, "Cachorro", raca, nome, sexo, idadeMeses, porte, temperamento, status, historicoEventos, dataEntrada, dataAdocao)
+        pass
+   
+class Gato(Animal):
+   def __init__(self, id, raca, nome, sexo, idadeMeses, porte, temperamento, status, historicoEventos=None, dataEntrada=None, dataAdocao=None):
+        # chamando o construtor da classe pai (Animal)
+        super().__init__(id, "Gato", raca, nome, sexo, idadeMeses, porte, temperamento, status, historicoEventos, dataEntrada, dataAdocao)
+        pass
