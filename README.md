@@ -7,7 +7,7 @@ O projeto utiliza arquivos `.json` como armazenamento e segue um padrão de repo
 ---
 
 # 📁 Estrutura Atual do Projeto
-
+```
 animalparty/
 │
 ├── base/
@@ -31,6 +31,7 @@ animalparty/
 │ └── carregar_settings.py
 │
 └── main.py
+```
 
 ---
 
