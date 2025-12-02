@@ -1,0 +1,23 @@
+{
+    "Elegibilidade": {
+        "area_min": 20,
+        "exige_experiencia": false,
+        "permite_criancas": true
+    },
+    "pesos": {
+        "porte_moradia": 0.40,
+        "idade_energia": 0.25,
+        "experiencia": 0.20,
+        "criancas": 0.15
+    },
+    "regras": {
+        "porte_grande_em_apto": 0,
+        "porte_adequado": 100,
+        "energia_alta_adotante_idoso": 20,
+        "energia_ok": 100,
+        "sem_experiencia": 40,
+        "com_experiencia": 100,
+        "criancas_com_animal_arisco": 10,
+        "criancas_ok": 100
+    }
+}

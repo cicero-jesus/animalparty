@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nome": "Lucas da Silva",
+        "idade": 35,
+        "moradia": "apto",
+        "areaUtil": 45,
+        "experienciaPets": true,
+        "criancasEmCasa": false,
+        "outrosAnimais": true,
+        "elegivel": true,
+        "ptsCompatib": 78,
+        "animaisReservados": [],
+        "animaisAdotados": [],
+        "historico": [
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Rex: 78"
+        ]
+    }
+]
