@@ -1,20 +1,39 @@
 [
     {
         "id": 1,
-        "nome": "Lucas da Silva",
+        "_Adotante__nome": "Lucas da Silva",
         "idade": 35,
         "moradia": "apto",
         "areaUtil": 45,
         "experienciaPets": true,
-        "criancasEmCasa": false,
         "outrosAnimais": true,
+        "_Adotante__criancasEmCasa": false,
+        "politica_elegibilidade": null,
+        "politica_compatibilidade": null,
         "elegivel": true,
         "ptsCompatib": 78,
-        "animaisReservados": [],
-        "animaisAdotados": [],
-        "historico": [
+        "_historico": [
             "Elegibilidade: Aprovado",
             "Compatibilidade com Rex: 78"
-        ]
+        ],
+        "animaisReservados": [],
+        "animaisAdotados": []
+    },
+    {
+        "id": 2,
+        "_Adotante__nome": "cj",
+        "idade": 14,
+        "moradia": false,
+        "areaUtil": "casa",
+        "experienciaPets": 18.0,
+        "outrosAnimais": false,
+        "_Adotante__criancasEmCasa": false,
+        "politica_elegibilidade": null,
+        "politica_compatibilidade": null,
+        "elegivel": false,
+        "ptsCompatib": 0,
+        "_historico": [],
+        "animaisReservados": [],
+        "animaisAdotados": []
     }
 ]

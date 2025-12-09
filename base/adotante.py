@@ -90,6 +90,9 @@ class Adotante:
         pol = self.politica_elegibilidade
         motivos = []
 
+        if self.idade < pol.get("idade_minima", 0):
+            motivos.append("Idade mínima não atingida.")
+
         if self.areaUtil < pol["area_min"]:
             motivos.append("Área insuficiente.")
 

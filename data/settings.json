@@ -2,7 +2,8 @@
     "Elegibilidade": {
         "area_min": 20,
         "exige_experiencia": false,
-        "permite_criancas": true
+        "permite_criancas": true,
+        "idade_minima": 18
     },
     "pesos": {
         "porte_moradia": 0.40,
