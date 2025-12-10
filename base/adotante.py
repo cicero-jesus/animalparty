@@ -151,17 +151,17 @@ class Adotante:
     def obterHistorico(self):
         return list(self._historico)
 
-    # EXPORTAÇÃO PARA JSON
+    # EXPORTAR PARA JSON
 
     def to_dict(self):
         return {
             "id": self.id,
-            "nome": self.__nome,
+            "nome": self.nome,
             "idade": self.idade,
             "moradia": self.moradia,
             "areaUtil": self.areaUtil,
             "experienciaPets": self.experienciaPets,
-            "criancasEmCasa": self.__criancasEmCasa,
+            "criancasEmCasa": self.criancasEmCasa,
             "outrosAnimais": self.outrosAnimais,
             "elegivel": self.elegivel,
             "ptsCompatib": self.ptsCompatib,

@@ -20,7 +20,7 @@ class adotarDevolver:
         self.estrategiaTaxa = estrategiaTaxa
 
     def reservar(self, adotante, animal, dias_reserva=3):
-        if animal.status != "disponível":
+        if animal.status != "disponivel":
             raise ValueError(f"Animal {animal.id} não está disponível para reserva.")
 
         if not adotante.elegivel:
@@ -66,7 +66,7 @@ class adotarDevolver:
         if datetime.now() < data_exp:
             return  # ainda não expirou
 
-        animal.alterarStatus("disponível")
+        animal.alterarStatus("disponivel")
         animal.registrarEvento("reserva expirada", {"data": datetime.now().isoformat()})
 
         adotante.adicionarHistorico({
@@ -112,7 +112,7 @@ class adotarDevolver:
 
         data_dev = datetime.now()
 
-        animal.alterarStatus("disponível")
+        animal.alterarStatus("disponivel")
         animal.registrarEvento("devolução", {
             "motivo": motivo,
             "data": data_dev.isoformat()

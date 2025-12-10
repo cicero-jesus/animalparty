@@ -82,10 +82,8 @@ def main():
 
             adotante = Adotante(
                 len(adotanteRepo.adotantes) + 1,
-                nome, idade, criancas, moradia, area,
-                experiencia, outros,
-                ptsCompatib=0,
-                elegivel=False
+                nome, idade, moradia, area, criancas,
+                experiencia, outros
             )
 
             adotanteRepo.add(adotante)

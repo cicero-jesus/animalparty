@@ -1,20 +1,47 @@
 [
     {
         "id": 1,
-        "nome": "Lucas da Silva",
-        "idade": 35,
+        "nome": "Lucas",
+        "idade": 25,
+        "moradia": "casa",
+        "areaUtil": 100.0,
+        "experienciaPets": false,
+        "criancasEmCasa": true,
+        "outrosAnimais": false,
+        "elegivel": false,
+        "ptsCompatib": 0,
+        "historico": [],
+        "animaisReservados": [],
+        "animaisAdotados": []
+    },
+    {
+        "id": 2,
+        "nome": "Ivan",
+        "idade": 16,
         "moradia": "apto",
-        "areaUtil": 45,
+        "areaUtil": 15.0,
         "experienciaPets": true,
         "criancasEmCasa": false,
-        "outrosAnimais": true,
-        "elegivel": true,
-        "ptsCompatib": 78,
+        "outrosAnimais": false,
+        "elegivel": false,
+        "ptsCompatib": 0,
+        "historico": [],
         "animaisReservados": [],
-        "animaisAdotados": [],
-        "historico": [
-            "Elegibilidade: Aprovado",
-            "Compatibilidade com Rex: 78"
-        ]
+        "animaisAdotados": []
+    },
+    {
+        "id": 3,
+        "nome": "Freitas",
+        "idade": 35,
+        "moradia": "casa",
+        "areaUtil": 120.0,
+        "experienciaPets": false,
+        "criancasEmCasa": true,
+        "outrosAnimais": false,
+        "elegivel": false,
+        "ptsCompatib": 0,
+        "historico": [],
+        "animaisReservados": [],
+        "animaisAdotados": []
     }
 ]

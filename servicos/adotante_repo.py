@@ -28,7 +28,7 @@ class AdotanteRepo:
 
     def save(self):
         with open(self.caminho, "w", encoding="utf-8") as f:
-            json.dump([a.__dict__ for a in self.adotantes], f, indent=4, ensure_ascii=False)
+            json.dump([a.to_dict() for a in self.adotantes], f, indent=4, ensure_ascii=False)
 
     # Criar
     def add(self, adotante: Adotante):

@@ -16,15 +16,8 @@ class Animal:
     marcado como inadoptável conforme saúde e comportamento.
     """
 
-    STATUS_VALIDOS = {
-        "recem-chegado",
-        "quarentena",
-        "disponivel",
-        "reservado",
-        "adotado",
-        "inadotavel"
-    }
-
+    STATUS_VALIDOS = ["recem-chegado", "quarentena", "disponivel", "reservado", "adotado", "inadotavel"]
+    
     def __init__(self, id, especie, raca, nome, sexo, idadeMeses,
                  porte, temperamento, status="recem-chegado",
                  historicoEventos=None, dataEntrada=None, dataAdocao=None):
