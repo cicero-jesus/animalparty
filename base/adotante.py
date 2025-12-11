@@ -107,6 +107,15 @@ class Adotante:
 
         return (self.elegivel, motivos)
 
+    MAPA_TEMPERAMENTO = {
+    "calmo": "baixa",
+    "dócil": "baixa",
+    "arisco": "alta",
+    "agitado": "alta",
+    "raiva": "alta",
+    "mediano": "media"
+    }
+
     def calcularCompatibilidade(self, animal):
         if self.politica_compatibilidade is None:
             raise RuntimeError("Política de compatibilidade não carregada.")
@@ -123,7 +132,8 @@ class Adotante:
             score += reg["porte_adequado"] * pes["porte_moradia"]
 
         # Energia
-        if animal.energia == "alta" and self.idade > 60:
+        energia = self.MAPA_TEMPERAMENTO.get(animal.temperamento, "media")
+        if energia == "alta" and self.idade > 60:
             score += reg["energia_alta_adotante_idoso"] * pes["idade_energia"]
         else:
             score += reg["energia_ok"] * pes["idade_energia"]

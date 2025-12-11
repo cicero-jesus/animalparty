@@ -8,21 +8,6 @@
         "idadeMeses": 36,
         "porte": "M",
         "temperamento": "calmo",
-        "status": "disponivel",
+        "status": "adotado",
         "dataEntrada": "2025-01-10T12:01:00",
-        "dataAdocao": null
-    },
-    {
-        "id": 2,
-        "especie": "cachorro",
-        "raca": "v",
-        "nome": "ret",
-        "sexo": "m",
-        "idadeMeses": 5,
-        "porte": "p",
-        "temperamento": "raiva",
-        "status": "disponivel",
-        "dataEntrada": "2025-12-02T00:56:47.666080",
-        "dataAdocao": null
-    }
-]
+        "dataAdocao": 

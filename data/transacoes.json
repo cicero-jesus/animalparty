@@ -1,1 +1,19 @@
-[]
+[
+    {
+        "id": "8f1fe3bf-2e82-4893-9f5b-50e07da0a72d",
+        "animalId": 1,
+        "adotanteId": 1,
+        "dataReserva": "2025-12-11T16:08:14.521491",
+        "dataExpiracaoReserva": "2025-12-14T16:08:14.521491",
+        "dataAdocao": "2025-12-11T16:09:10.547449",
+        "dataDevolucao": null,
+        "motivoDevolucao": null,
+        "contrato": {
+            "contratoId": "b69fb217-1152-4761-b123-e1cb479f8ade",
+            "animalId": 1,
+            "adotanteId": 1,
+            "data": "2025-12-11T16:09:10.547572",
+            "termos": "O adotante se compromete a cuidar do animal..."
+        }
+    }
+]

@@ -9,9 +9,16 @@
         "criancasEmCasa": true,
         "outrosAnimais": false,
         "elegivel": true,
-        "ptsCompatib": 0,
+        "ptsCompatib": 100,
         "historico": [
-            "Elegibilidade: Aprovado"
+            "Elegibilidade: Aprovado",
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Rex: 100",
+            {
+                "evento": "reserva",
+                "animalId": 1,
+                "data": "2025-12-11T16:08:14.521491"
+            }
         ],
         "animaisReservados": [],
         "animaisAdotados": []

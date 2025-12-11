@@ -50,8 +50,12 @@ class Animal:
     def historicoEventos(self):
         return tuple(self._historico)
 
-    def registrarEvento(self, descricao):
-        evento = f"{datetime.now().isoformat()} - {descricao}"
+    def registrarEvento(self, tipo, dados=None):
+        evento = {
+        "Tempo": datetime.now().isoformat(),
+        "tipo": tipo,
+        "dados": dados if dados else {}
+    }
         self._historico.append(evento)
 
     def alterarStatus(self, novo_status):
