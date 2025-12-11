@@ -9,11 +9,6 @@
         "porte": "M",
         "temperamento": "calmo",
         "status": "disponivel",
-        "_historico": [
-            "2025-01-10T12:01:00 - Entrada no sistema.",
-            "2025-01-10T13:44:13 - Status alterado de 'recem-chegado' para 'quarentena'.",
-            "2025-12-02T00:55:57.310751 - Entrada no sistema."
-        ],
         "dataEntrada": "2025-01-10T12:01:00",
         "dataAdocao": null
     },
@@ -27,9 +22,6 @@
         "porte": "p",
         "temperamento": "raiva",
         "status": "disponivel",
-        "_historico": [
-            "2025-12-02T00:56:47.666098 - Entrada no sistema."
-        ],
         "dataEntrada": "2025-12-02T00:56:47.666080",
         "dataAdocao": null
     }

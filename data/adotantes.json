@@ -1,46 +1,35 @@
 [
     {
         "id": 1,
-        "nome": "Lucas",
-        "idade": 25,
+        "nome": "Jair",
+        "idade": 35,
         "moradia": "casa",
-        "areaUtil": 100.0,
-        "experienciaPets": false,
+        "areaUtil": 50.0,
+        "experienciaPets": true,
         "criancasEmCasa": true,
         "outrosAnimais": false,
-        "elegivel": false,
+        "elegivel": true,
         "ptsCompatib": 0,
-        "historico": [],
+        "historico": [
+            "Elegibilidade: Aprovado"
+        ],
         "animaisReservados": [],
         "animaisAdotados": []
     },
     {
         "id": 2,
-        "nome": "Ivan",
-        "idade": 16,
+        "nome": "Lucas",
+        "idade": 17,
         "moradia": "apto",
         "areaUtil": 15.0,
-        "experienciaPets": true,
-        "criancasEmCasa": false,
-        "outrosAnimais": false,
-        "elegivel": false,
-        "ptsCompatib": 0,
-        "historico": [],
-        "animaisReservados": [],
-        "animaisAdotados": []
-    },
-    {
-        "id": 3,
-        "nome": "Freitas",
-        "idade": 35,
-        "moradia": "casa",
-        "areaUtil": 120.0,
         "experienciaPets": false,
         "criancasEmCasa": true,
         "outrosAnimais": false,
         "elegivel": false,
         "ptsCompatib": 0,
-        "historico": [],
+        "historico": [
+            "Elegibilidade: Reprovado"
+        ],
         "animaisReservados": [],
         "animaisAdotados": []
     }

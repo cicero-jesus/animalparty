@@ -2,6 +2,7 @@ from servicos.animal_repo import AnimalRepo
 from servicos.adotante_repo import AdotanteRepo
 from servicos.transacoes_repo import TransacaoRepo
 from servicos.relatorios_repo import RelatorioRepo
+from servicos.carregar_settings import CarregarSettings
 
 from base.adotar_devolver import adotarDevolver
 
@@ -82,12 +83,26 @@ def main():
 
             adotante = Adotante(
                 len(adotanteRepo.adotantes) + 1,
-                nome, idade, moradia, area, criancas,
-                experiencia, outros
+                nome, idade, moradia, area, experiencia,
+                criancas, outros
             )
+            #Carregar Politicas
+            politica_elegibilidade = CarregarSettings.carregar_elegibilidade("data/settings.json")
+            politica_compatibilidade = CarregarSettings.carregar_compatibilidade("data/settings.json")
+
+            # aplicar políticas
+            adotante.politica_elegibilidade = politica_elegibilidade
+            adotante.politica_compatibilidade = politica_compatibilidade
+
+            # Valida Elegiblidade
+            elegivel, motivos = adotante.validarElegibilidade()
+
+            print("Elegível?" , elegivel)
+            if not elegivel:
+                print("Motivos:", motivos)
 
             adotanteRepo.add(adotante)
-            print("Adotante cadastrado.")
+            print("Adotante cadastrado, após verificação de elegibilidade.")
 
         elif esc == "3":
             animalId = int(input("ID do animal: "))
@@ -96,13 +111,32 @@ def main():
             animal = animalRepo.findById(animalId)
             adotante = adotanteRepo.findById(adotanteId)
 
-            transacao = service.reservar(adotante, animal)
+            #Carregar Politicas
+            #print(CarregarSettings._caminho_absoluto("data/settings.json"))
+            politica_elegibilidade = CarregarSettings.carregar_elegibilidade("data/settings.json")
+            politica_compatibilidade = CarregarSettings.carregar_compatibilidade("data/settings.json")
 
-            transacaoRepo.add(transacao)
+            # Reaplicar políticas ao carregar
+            adotante.politica_elegibilidade = politica_elegibilidade
+            adotante.politica_compatibilidade = politica_compatibilidade
+
+            # garantir elegibilidade atualizada
+            adotante.validarElegibilidade()
+
+            # calcular compatibilidade com o animal
+            adotante.calcularCompatibilidade(animal)
+
+            # Tentativa de reserva
+            try:
+                transacao = service.reservar(adotante, animal)
+                transacaoRepo.add(transacao)
+                print("Reserva registrada.")
+            except ValueError as e: 
+                print(f"Erro ao reservar: {e}")
+
             animalRepo.save()
             adotanteRepo.save()
 
-            print("Reserva registrada.")
 
         elif esc == "4":
             tId = input("ID da transação: ")
