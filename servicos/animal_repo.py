@@ -52,7 +52,7 @@ class AnimalRepo:
             }
 
         with open(self.file_path, "w", encoding="utf-8") as f:
-            json.dump([serialize(a) for a in self.animais], f, indent=4)
+            json.dump([serialize(a) for a in self.animais], f, ensure_ascii=False, indent=4)
 
     def add(self, animal):
         self.animais.append(animal)

@@ -1,13 +1,15 @@
 [
     {
         "id": 1,
-        "especie": "Cachorro",
-        "raca": "Labrador",
+        "especie": "cachorro",
+        "raca": "vora-lata",
         "nome": "Rex",
-        "sexo": "M",
-        "idadeMeses": 36,
-        "porte": "M",
-        "temperamento": "calmo",
-        "status": "adotado",
-        "dataEntrada": "2025-01-10T12:01:00",
-        "dataAdocao": 
+        "sexo": "macho",
+        "idadeMeses": 25,
+        "porte": "pequeno",
+        "temperamento": "dócil",
+        "status": "disponivel",
+        "dataEntrada": "2025-12-14T22:22:09.154327",
+        "dataAdocao": null
+    }
+]
