@@ -18,6 +18,26 @@
                 "evento": "reserva",
                 "animalId": 1,
                 "data": "2025-12-11T16:08:14.521491"
+            },
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Rex: 100",
+            {
+                "evento": "reserva",
+                "animalId": 1,
+                "data": "2025-12-14T22:25:53.311895"
+            },
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Rex: 100",
+            {
+                "evento": "adoção efetivada",
+                "animalId": 1,
+                "data": "2025-12-15T00:23:45.225632"
+            },
+            {
+                "evento": "devolução",
+                "animalId": 1,
+                "motivo": "O animal não se adaptou ao ambiente",
+                "data": "2025-12-15T00:24:46.998980"
             }
         ],
         "animaisReservados": [],

@@ -46,10 +46,23 @@ class AnimalRepo:
 
     def save(self):
         def serialize(a):
-            return {
-                k: v for k, v in a.__dict__.items()
-                if not k.startswith("_")
-            }
+            data = {}
+            from datetime import datetime
+
+    def serialize(a):
+        data = {}
+
+        for k, v in a.__dict__.items():
+            if k.startswith("_"):
+                continue
+
+            if isinstance(v, datetime):
+                data[k] = v.isoformat()
+            else:
+                data[k] = v
+
+        return data
+
 
         with open(self.file_path, "w", encoding="utf-8") as f:
             json.dump([serialize(a) for a in self.animais], f, ensure_ascii=False, indent=4)

@@ -128,6 +128,7 @@ def main():
 
             # Tentativa de reserva
             try:
+                animal.reservar()
                 transacao = service.reservar(adotante, animal)
                 transacaoRepo.add(transacao)
                 print("Reserva registrada.")

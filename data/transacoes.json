@@ -5,14 +5,31 @@
         "adotanteId": 1,
         "dataReserva": "2025-12-11T16:08:14.521491",
         "dataExpiracaoReserva": "2025-12-14T16:08:14.521491",
-        "dataAdocao": "2025-12-11T16:09:10.547449",
+        "dataAdocao": "2025-12-14T22:26:22.487777",
         "dataDevolucao": null,
         "motivoDevolucao": null,
         "contrato": {
-            "contratoId": "b69fb217-1152-4761-b123-e1cb479f8ade",
+            "contratoId": "22547558-748e-4652-9320-c24529dd075c",
             "animalId": 1,
             "adotanteId": 1,
-            "data": "2025-12-11T16:09:10.547572",
+            "data": "2025-12-14T22:26:22.487913",
+            "termos": "O adotante se compromete a cuidar do animal..."
+        }
+    },
+    {
+        "id": "2ad2d6f7-11d8-475a-a012-ef6a89caa57f",
+        "animalId": 1,
+        "adotanteId": 1,
+        "dataReserva": "2025-12-14T22:25:53.311895",
+        "dataExpiracaoReserva": "2025-12-17T22:25:53.311895",
+        "dataAdocao": "2025-12-15T00:23:45.225632",
+        "dataDevolucao": "2025-12-15T00:24:46.998980",
+        "motivoDevolucao": "O animal não se adaptou ao ambiente",
+        "contrato": {
+            "contratoId": "95333b93-fd99-4752-869b-6ae7ce3ba93d",
+            "animalId": 1,
+            "adotanteId": 1,
+            "data": "2025-12-15T00:23:45.225777",
             "termos": "O adotante se compromete a cuidar do animal..."
         }
     }
