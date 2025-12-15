@@ -201,7 +201,12 @@ def main():
 
             # Devoluções
             elif r == "5":
-                print(relatorios.devolucoes())
+                resultado = relatorios.devolucoes()
+                print(f"Total de devoluções: {resultado['total']}")
+                print("IDs das devoluções:")
+                for i in resultado["ids"]:
+                    print("-", i)
+                    
             # Top 5 adotáveis
             elif r == "6":
                 animais_ordenados = sorted(

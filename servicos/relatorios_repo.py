@@ -42,7 +42,14 @@ class RelatorioRepo:
 
     # Devoluções
     def devolucoes(self):
-        return [t for t in self.transacaoRepo.transacoes if t["dataDevolucao"]]
+        devolucoes = [
+        t for t in self.transacaoRepo.transacoes
+        if t.get("dataDevolucao") is not None
+    ]
+        return {
+        "total": len(devolucoes),
+        "ids": [t["id"] for t in devolucoes]
+    }
 
     # Adoções por período (YYYY-MM-DD)
     def adocoesPorPeriodo(self, dataInicial, dataFinal):
