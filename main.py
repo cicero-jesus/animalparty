@@ -124,11 +124,14 @@ def main():
             adotante.validarElegibilidade()
 
             # calcular compatibilidade com o animal
-            adotante.calcularCompatibilidade(animal)
+            try:
+                adotante.calcularCompatibilidade(animal)
+            except ValueError as e:
+                print(f"Erro: {e}")
+                continue
 
             # Tentativa de reserva
             try:
-                animal.reservar()
                 transacao = service.reservar(adotante, animal)
                 transacaoRepo.add(transacao)
                 print("Reserva registrada.")
@@ -140,9 +143,30 @@ def main():
 
 
         elif esc == "4":
-            tId = input("ID da transação: ")
+            reservas = relatorios.reservasAtivasDetalhadas()
 
-            trans = transacaoRepo.findById(tId)
+            if not reservas:
+                print("Não há reservas ativas.")
+                continue
+
+            print("Reservas ativas:")
+            for r in reservas:
+                print(
+                    f"Animal: {r['animalNome']} (ID {r['animalId']}) | "
+                    f"Adotante: {r['adotanteNome']} (ID {r['adotanteId']})"
+                )
+
+            animalId = int(input("Informe o ID do animal: "))
+            adotanteId = int(input("Informe o ID do adotante: "))
+
+            trans = transacaoRepo.findReservaAtiva(animalId, adotanteId)
+
+            if not trans:
+                print("Reserva não encontrada.")
+                continue
+
+
+            #trans = transacaoRepo.findById(tId)
             animal = animalRepo.findById(trans["animalId"])
             adotante = adotanteRepo.findById(trans["adotanteId"])
 
@@ -155,10 +179,27 @@ def main():
             print("Adoção efetivada.")
 
         elif esc == "5":
-            tId = input("ID da transação: ")
+
+            adocoes = relatorios.adocoesAtivasDetalhadas()
+
+            if not adocoes:
+                print("Não há adoções ativas para devolução.")
+                continue
+
+            print("\nAdoções ativas:")
+            for i, a in enumerate(adocoes, 1):
+                print(
+                    f"{i}. Animal #{a['animalId']} - {a['animalNome']} | "
+                    f"Adotante #{a['adotanteId']} - {a['adotanteNome']}"
+                )
+
+            op = int(input("Escolha a adoção para devolver: ")) - 1
             motivo = input("Motivo da devolução: ")
 
-            trans = transacaoRepo.findById(tId)
+            selecionada = adocoes[op]
+
+            trans = selecionada["transacao"]
+
             animal = animalRepo.findById(trans["animalId"])
             adotante = adotanteRepo.findById(trans["adotanteId"])
 
@@ -206,7 +247,7 @@ def main():
                 print("IDs das devoluções:")
                 for i in resultado["ids"]:
                     print("-", i)
-                    
+
             # Top 5 adotáveis
             elif r == "6":
                 animais_ordenados = sorted(
@@ -252,15 +293,22 @@ def main():
                     print("Nenhum dado disponível.")
 
             elif r == "9":
+                ids = relatorios.devolucoes()["ids"]
+
+                if not ids:
+                    print("Não há devoluções registradas.")
+                    continue
+
                 motivos = {}
-                devs = relatorios.devolucoes()
+                for t in transacaoRepo.transacoes:
+                    if t["id"] in ids:
+                        m = t.get("motivoDevolucao", "Não informado")
+                        motivos[m] = motivos.get(m, 0) + 1
 
-                for t in devs:
-                    m = t["motivoDevolucao"]
-                    motivos[m] = motivos.get(m, 0) + 1
-
+                print("\nDevoluções por motivo:")
                 for mot, qnt in motivos.items():
-                    print(f"{mot}: {qnt} devoluções")
+                    print(f"{mot}: {qnt}")
+
 
         elif esc == "0":
             print("Saindo...")

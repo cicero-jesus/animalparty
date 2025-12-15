@@ -38,7 +38,12 @@
                 "animalId": 1,
                 "motivo": "O animal não se adaptou ao ambiente",
                 "data": "2025-12-15T00:24:46.998980"
-            }
+            },
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Rex: 100",
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Botas: 100",
+            "Elegibilidade: Aprovado"
         ],
         "animaisReservados": [],
         "animaisAdotados": []
@@ -55,7 +60,65 @@
         "elegivel": false,
         "ptsCompatib": 0,
         "historico": [
+            "Elegibilidade: Reprovado",
             "Elegibilidade: Reprovado"
+        ],
+        "animaisReservados": [],
+        "animaisAdotados": []
+    },
+    {
+        "id": 3,
+        "nome": "Igor",
+        "idade": 31,
+        "moradia": "casa",
+        "areaUtil": 30.0,
+        "experienciaPets": true,
+        "criancasEmCasa": false,
+        "outrosAnimais": false,
+        "elegivel": true,
+        "ptsCompatib": 100,
+        "historico": [
+            "Elegibilidade: Aprovado",
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Rex: 100",
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Rex: 100",
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Botas: 100",
+            {
+                "evento": "reserva",
+                "animalId": 2,
+                "data": "2025-12-15T01:39:17.527698"
+            },
+            {
+                "evento": "adoção efetivada",
+                "animalId": 2,
+                "data": "2025-12-15T01:43:42.683329"
+            },
+            {
+                "evento": "devolução",
+                "animalId": 2,
+                "motivo": "Não consegui manter o bixano",
+                "data": "2025-12-15T01:53:07.098189"
+            },
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Botas: 100",
+            {
+                "evento": "reserva",
+                "animalId": 2,
+                "data": "2025-12-15T02:02:36.680877"
+            },
+            {
+                "evento": "adoção efetivada",
+                "animalId": 2,
+                "data": "2025-12-15T02:02:50.508713"
+            },
+            {
+                "evento": "devolução",
+                "animalId": 2,
+                "motivo": "Não deu certo",
+                "data": "2025-12-15T02:03:16.850028"
+            }
         ],
         "animaisReservados": [],
         "animaisAdotados": []

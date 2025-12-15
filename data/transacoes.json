@@ -32,5 +32,39 @@
             "data": "2025-12-15T00:23:45.225777",
             "termos": "O adotante se compromete a cuidar do animal..."
         }
+    },
+    {
+        "id": "9e96d9ef-cf62-4ad9-901e-66d47dfa27de",
+        "animalId": 2,
+        "adotanteId": 3,
+        "dataReserva": "2025-12-15T01:39:17.527698",
+        "dataExpiracaoReserva": "2025-12-18T01:39:17.527698",
+        "dataAdocao": "2025-12-15T01:43:42.683329",
+        "dataDevolucao": "2025-12-15T01:53:07.098189",
+        "motivoDevolucao": "Não consegui manter o bixano",
+        "contrato": {
+            "contratoId": "672b9d2a-80b4-4c49-bec4-ccf291402c4f",
+            "animalId": 2,
+            "adotanteId": 3,
+            "data": "2025-12-15T01:43:42.683501",
+            "termos": "O adotante se compromete a cuidar do animal..."
+        }
+    },
+    {
+        "id": "d16a86a7-df02-40fc-aed5-856b054ce3ae",
+        "animalId": 2,
+        "adotanteId": 3,
+        "dataReserva": "2025-12-15T02:02:36.680877",
+        "dataExpiracaoReserva": "2025-12-18T02:02:36.680877",
+        "dataAdocao": "2025-12-15T02:02:50.508713",
+        "dataDevolucao": "2025-12-15T02:03:16.850028",
+        "motivoDevolucao": "Não deu certo",
+        "contrato": {
+            "contratoId": "59be7bd6-e9ba-46cb-bb9b-d1d7c463262d",
+            "animalId": 2,
+            "adotanteId": 3,
+            "data": "2025-12-15T02:02:50.508827",
+            "termos": "O adotante se compromete a cuidar do animal..."
+        }
     }
 ]

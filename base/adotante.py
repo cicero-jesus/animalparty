@@ -125,6 +125,9 @@ class Adotante:
 
         score = 0
 
+        # Verifica se o animal existe
+        if animal is None:
+            raise ValueError("Animal inválido para cálculo de compatibilidade")
         # Porte
         if self.moradia == "apto" and animal.porte == "G":
             score += reg["porte_grande_em_apto"] * pes["porte_moradia"]

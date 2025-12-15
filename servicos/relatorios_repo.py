@@ -77,3 +77,39 @@ class RelatorioRepo:
             "totalDevolucoes": len([t for t in transacoes if t["dataDevolucao"]])
         }
 
+    def reservasAtivasDetalhadas(self):
+        reservas = []
+
+        for t in self.transacaoRepo.transacoes:
+            if t["dataReserva"] and not t["dataAdocao"] and not t["dataDevolucao"]:
+                animal = self.animalRepo.findById(t["animalId"])
+                adotante = self.adotanteRepo.findById(t["adotanteId"])
+                reservas.append({
+                    "animalId": animal.id,
+                    "animalNome": animal.nome,
+                    "adotanteId": adotante.id,
+                    "adotanteNome": adotante.nome
+                })
+
+        return reservas
+
+    def adocoesAtivasDetalhadas(self):
+        resultado = []
+
+        for t in self.transacaoRepo.transacoes:
+            if t.get("dataAdocao") and not t.get("dataDevolucao"):
+                animal = self.animalRepo.findById(t["animalId"])
+                adotante = self.adotanteRepo.findById(t["adotanteId"])
+
+                if animal and adotante:
+                    resultado.append({
+                        "animalId": animal.id,
+                        "animalNome": animal.nome,
+                        "adotanteId": adotante.id,
+                        "adotanteNome": adotante.nome,
+                        "transacao": t
+                    })
+
+        return resultado
+
+

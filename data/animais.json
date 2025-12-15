@@ -2,14 +2,27 @@
     {
         "id": 1,
         "especie": "cachorro",
-        "raca": "vora-lata",
+        "raca": "vira-lata",
         "nome": "Rex",
         "sexo": "macho",
         "idadeMeses": 25,
         "porte": "pequeno",
         "temperamento": "dócil",
         "status": "disponivel",
-        "dataEntrada": "2025-12-14T22:22:09.154327",
+        "dataEntrada": "2025-12-15T01:38:30.924431",
         "dataAdocao": null
+    },
+    {
+        "id": 2,
+        "especie": "gato",
+        "raca": "vira-lata",
+        "nome": "Botas",
+        "sexo": "fêmea",
+        "idadeMeses": 20,
+        "porte": "pequeno",
+        "temperamento": "dócil",
+        "status": "disponivel",
+        "dataEntrada": "2025-12-15T01:39:06.030263",
+        "dataAdocao": "2025-12-15T02:02:50.508713"
     }
 ]

@@ -84,3 +84,17 @@ class TransacaoRepo:
     # Listar por animal
     def findByAnimal(self, animal_id):
         return [t for t in self.transacoes if t.get("animalId") == animal_id]
+
+    # Buscas por reservas ativas
+    def findReservaAtiva(self, animalId, adotanteId):
+        for t in self.transacoes:
+            if (
+                t["animalId"] == animalId and
+                t["adotanteId"] == adotanteId and
+                t["dataReserva"] is not None and
+                t["dataAdocao"] is None and
+                t["dataDevolucao"] is None
+            ):
+                return t
+        return None
+

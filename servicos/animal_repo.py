@@ -45,23 +45,20 @@ class AnimalRepo:
             return []
 
     def save(self):
+        from datetime import datetime
         def serialize(a):
             data = {}
-            from datetime import datetime
 
-    def serialize(a):
-        data = {}
+            for k, v in a.__dict__.items():
+                if k.startswith("_"):
+                    continue
 
-        for k, v in a.__dict__.items():
-            if k.startswith("_"):
-                continue
+                if isinstance(v, datetime):
+                    data[k] = v.isoformat()
+                else:
+                    data[k] = v
 
-            if isinstance(v, datetime):
-                data[k] = v.isoformat()
-            else:
-                data[k] = v
-
-        return data
+            return data
 
 
         with open(self.file_path, "w", encoding="utf-8") as f:
