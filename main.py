@@ -105,7 +105,28 @@ def main():
             print("Adotante cadastrado, após verificação de elegibilidade.")
 
         elif esc == "3":
-            animalId = int(input("ID do animal: "))
+
+            animais_disp = animalRepo.listarDisponiveis()
+
+            if not animais_disp:
+                print("Não há animais disponíveis para reserva.")
+                continue
+
+            print("\nAnimais disponíveis:")
+            for a in animais_disp:
+                print(
+                    f"ID: {a.id} | "
+                    f"Nome: {a.nome} | "
+                    f"Espécie: {a.especie} | "
+                    f"Porte: {a.porte}"
+                )
+
+            print("\nAdotantes cadastrados:")
+            for ad in adotanteRepo.adotantes:
+                print(f"ID: {ad.id} | Nome: {ad.nome}")
+
+
+            animalId = int(input("\nID do animal: "))
             adotanteId = int(input("ID do adotante: "))
 
             animal = animalRepo.findById(animalId)

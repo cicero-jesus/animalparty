@@ -76,3 +76,6 @@ class AnimalRepo:
             if a.id == animal_id:
                 return a
         return None
+
+    def listarDisponiveis(self):
+        return [a for a in self.animais if a.status == "disponivel"]

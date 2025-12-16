@@ -6,8 +6,8 @@
         "dataReserva": "2025-12-11T16:08:14.521491",
         "dataExpiracaoReserva": "2025-12-14T16:08:14.521491",
         "dataAdocao": "2025-12-14T22:26:22.487777",
-        "dataDevolucao": null,
-        "motivoDevolucao": null,
+        "dataDevolucao": "2025-12-16T19:54:42.751943",
+        "motivoDevolucao": "morreu",
         "contrato": {
             "contratoId": "22547558-748e-4652-9320-c24529dd075c",
             "animalId": 1,
@@ -98,6 +98,40 @@
             "animalId": 3,
             "adotanteId": 4,
             "data": "2025-12-16T15:08:42.485529",
+            "termos": "O adotante se compromete a cuidar do animal..."
+        }
+    },
+    {
+        "id": "4dcc2ce5-5520-4b85-b167-9077418327b3",
+        "animalId": 1,
+        "adotanteId": 1,
+        "dataReserva": "2025-12-16T19:53:48.268076",
+        "dataExpiracaoReserva": "2025-12-19T19:53:48.268076",
+        "dataAdocao": "2025-12-16T19:54:00.697806",
+        "dataDevolucao": null,
+        "motivoDevolucao": null,
+        "contrato": {
+            "contratoId": "a68d2c08-d28d-47e9-b5f7-8add8d9445d6",
+            "animalId": 1,
+            "adotanteId": 1,
+            "data": "2025-12-16T19:54:00.697945",
+            "termos": "O adotante se compromete a cuidar do animal..."
+        }
+    },
+    {
+        "id": "e42117cf-7f37-481a-aa55-52bb1e18de7f",
+        "animalId": 1,
+        "adotanteId": 3,
+        "dataReserva": "2025-12-16T19:55:43.175916",
+        "dataExpiracaoReserva": "2025-12-19T19:55:43.175916",
+        "dataAdocao": "2025-12-16T19:56:11.006715",
+        "dataDevolucao": "2025-12-16T19:56:23.599546",
+        "motivoDevolucao": "morreu",
+        "contrato": {
+            "contratoId": "3adff85e-0a0d-4a8e-bf12-570e6da14982",
+            "animalId": 1,
+            "adotanteId": 3,
+            "data": "2025-12-16T19:56:11.006892",
             "termos": "O adotante se compromete a cuidar do animal..."
         }
     }

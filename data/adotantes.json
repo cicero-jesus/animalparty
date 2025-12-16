@@ -43,7 +43,25 @@
             "Compatibilidade com Rex: 100",
             "Elegibilidade: Aprovado",
             "Compatibilidade com Botas: 100",
-            "Elegibilidade: Aprovado"
+            "Elegibilidade: Aprovado",
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Rex: 100",
+            {
+                "evento": "reserva",
+                "animalId": 1,
+                "data": "2025-12-16T19:53:48.268076"
+            },
+            {
+                "evento": "adoção efetivada",
+                "animalId": 1,
+                "data": "2025-12-16T19:54:00.697806"
+            },
+            {
+                "evento": "devolução",
+                "animalId": 1,
+                "motivo": "morreu",
+                "data": "2025-12-16T19:54:42.751943"
+            }
         ],
         "animaisReservados": [],
         "animaisAdotados": []
@@ -118,6 +136,24 @@
                 "animalId": 2,
                 "motivo": "Não deu certo",
                 "data": "2025-12-15T02:03:16.850028"
+            },
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Rex: 100",
+            {
+                "evento": "reserva",
+                "animalId": 1,
+                "data": "2025-12-16T19:55:43.175916"
+            },
+            {
+                "evento": "adoção efetivada",
+                "animalId": 1,
+                "data": "2025-12-16T19:56:11.006715"
+            },
+            {
+                "evento": "devolução",
+                "animalId": 1,
+                "motivo": "morreu",
+                "data": "2025-12-16T19:56:23.599546"
             }
         ],
         "animaisReservados": [],
