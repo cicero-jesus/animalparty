@@ -83,5 +83,22 @@
             "data": "2025-12-16T12:40:22.281752",
             "termos": "O adotante se compromete a cuidar do animal..."
         }
+    },
+    {
+        "id": "06621852-c197-459d-b6d5-ebe4e1584c09",
+        "animalId": 3,
+        "adotanteId": 4,
+        "dataReserva": "2025-12-16T15:08:28.908439",
+        "dataExpiracaoReserva": "2025-12-19T15:08:28.908439",
+        "dataAdocao": "2025-12-16T15:08:42.485381",
+        "dataDevolucao": "2025-12-16T15:31:51.878625",
+        "motivoDevolucao": "Não se adaptou ao ambiente",
+        "contrato": {
+            "contratoId": "610b6185-e2c0-436b-9e7e-524a3c68f92f",
+            "animalId": 3,
+            "adotanteId": 4,
+            "data": "2025-12-16T15:08:42.485529",
+            "termos": "O adotante se compromete a cuidar do animal..."
+        }
     }
 ]

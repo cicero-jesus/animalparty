@@ -250,14 +250,42 @@ def main():
 
             # Top 5 adotáveis
             elif r == "6":
-                animais_ordenados = sorted(
-                    [a for a in animalRepo.animais if hasattr(a, "ptsCompatib")],
-                    key=lambda x: x.ptsCompatib,
-                    reverse=True
-                )
-                top5 = animais_ordenados[:5]
-                for a in top5:
-                    print(f"{a.nome} - Compatibilidade: {a.ptsCompatib}")
+                ranking = []
+
+                for a in animalRepo.animais:
+                    if a.status != "disponivel":
+                        continue
+
+                    pontos = 0
+
+                    # espécie
+                    if a.especie == "cachorro":
+                        pontos += 2
+
+                    # idade (até 2 anos)
+                    if a.idadeMeses <= 24:
+                        pontos += 2
+
+                    # porte
+                    if a.porte in ("pequeno", "medio"):
+                        pontos += 1
+
+                    # temperamento
+                    if a.temperamento == "calmo":
+                        pontos += 1
+
+                    ranking.append((pontos, a))
+
+                if not ranking:
+                    print("Nenhum animal disponível para ranking.")
+                else:
+                    ranking.sort(key=lambda x: x[0], reverse=True)
+                    top5 = ranking[:5]
+
+                    print("\nTop 5 animais mais adotáveis:")
+                    for pos, (pts, a) in enumerate(top5, start=1):
+                        print(f"{pos}º {a.nome} ({a.especie}) - {pts} pontos")
+
 
             elif r == "7":
                 total = len(animalRepo.animais)
@@ -279,18 +307,43 @@ def main():
                     taxa = (dados["adotados"] / dados["total"]) * 100 if dados["total"] else 0
                     print(f"{cat}: {taxa:.2f}% de adoção")
 
+
             elif r == "8":
+
                 tempos = []
-                for a in relatorios.animaisAdotados():
-                    if a.dataEntrada and a.dataAdocao:
-                        dt1 = datetime.fromisoformat(a.dataEntrada)
-                        dt2 = datetime.fromisoformat(a.dataAdocao)
-                        tempos.append((dt2 - dt1).days)
+
+                for animal in animalRepo.animais:
+                    adocoes_validas = []
+
+                    for t in transacaoRepo.transacoes:
+                        if t.get("dataAdocao") and t["animalId"] == animal.id:
+                            dt_adocao = datetime.fromisoformat(t["dataAdocao"])
+                            dt_entrada = datetime.fromisoformat(animal.dataEntrada)
+
+                            # regra de negócio: adoção após entrada
+                            if dt_adocao >= dt_entrada:
+                                # considerar apenas a última adoção ativa
+                                if t.get("dataDevolucao") is None:
+                                    adocoes_validas.append(dt_adocao)
+
+                    if not adocoes_validas:
+                        continue
+
+                    # última adoção válida
+                    ultima_adocao = max(adocoes_validas)
+
+                    delta = ultima_adocao - datetime.fromisoformat(animal.dataEntrada)
+                    dias = delta.total_seconds() / 86400  # ← DIAS COM DECIMAL
+
+                    tempos.append(dias)
 
                 if tempos:
-                    print(f"Tempo médio: {statistics.mean(tempos):.2f} dias")
+                    print(
+                        f"Tempo médio entre entrada e última adoção válida: "
+                        f"{statistics.mean(tempos):.2f} dias"
+                    )
                 else:
-                    print("Nenhum dado disponível.")
+                    print("Nenhum dado válido para cálculo.")
 
             elif r == "9":
                 ids = relatorios.devolucoes()["ids"]

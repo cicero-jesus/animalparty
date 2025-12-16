@@ -153,6 +153,24 @@
                 "animalId": 3,
                 "motivo": "Ele merece alguem melhor do que eu",
                 "data": "2025-12-16T12:40:56.609936"
+            },
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Kel: 88",
+            {
+                "evento": "reserva",
+                "animalId": 3,
+                "data": "2025-12-16T15:08:28.908439"
+            },
+            {
+                "evento": "adoção efetivada",
+                "animalId": 3,
+                "data": "2025-12-16T15:08:42.485381"
+            },
+            {
+                "evento": "devolução",
+                "animalId": 3,
+                "motivo": "Não se adaptou ao ambiente",
+                "data": "2025-12-16T15:31:51.878625"
             }
         ],
         "animaisReservados": [],
