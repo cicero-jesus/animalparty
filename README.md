@@ -50,6 +50,8 @@ A classe `Animal` é abstrata e representa os atributos básicos:
 - temperamento  
 - status  
 - histórico de eventos  
+- dataEntrada
+- dataAdocao
 
 As classes `Cachorro` e `Gato` herdam de `Animal`, removendo a necessidade de informar `especie` ao instanciar.
 
@@ -57,19 +59,25 @@ As classes `Cachorro` e `Gato` herdam de `Animal`, removendo a necessidade de in
 
 ## 👤 **Adotante**
 
-Possui:
+Possui os atributos: 
 
-- Dados cadastrais  
-- Políticas de elegibilidade e compatibilidade  
-- Histórico 
-- Cálculo de elegibilidade  
-- Cálculo de compatibilidade  
+- id  
+- nome 
+- idade 
+- moradia
+- areautil  
+- experienciaPets
+- criancasEmCasa
+- outrosAnimais
+- politica_elegibilidade
+- politica_compatibilidade
+- elegivel
+- ptsCompatib
+- historico
+- animaisReservados
+- animaisAdotados
 
-Agora o construtor aceita os campos adicionais carregados do JSON:
-
-- `elegivel`
-- `ptsCompatib`
-- `historico`
+Representa um `adotante` envolvido no processo de reservas/adoções e mantém um histórico de eventos utilizado para geraçãode relatórios.
 
 ---
 
@@ -96,20 +104,31 @@ Gera:
 
 ---
 
-### 💻 RODANDO NO PC 
+### 💻 RODANDO NO PC
+----
+**CRIE UMA PASTA PARA SALVAR📁**
+- No Linux 🐧 (Via Terminal)
+> Ex.:
+``` 
+~/Documentos: mkdir POO-PROJECT
+```
+- No Windows 🪟
+> Abra o gerenciador arquivos, entre em uma pasta de sua escolha e crie uma nova pasta com o botão direito do mouse > novo > pasta, e renomeie para POO-PROJECT, por exemplo.
+----
+**ENTRE NA PASTA**📂
+```
+cd .../POO-PROJECT
+```
+> OBS: ".../" TRATA-SE DO DIRETÓRIO AONDE A PASTA FOI CRIADA. *Ex: /home/usuario/Downloads/POO-PROJECT* 
+---- 
 **COLE NO TERMINAL**📋
 ```
 git clone https://github.com/cicero-jesus/animalparty.git
 ```
 ---- 
-**ENTRE NA PASTA**📂
-```
-cd .../animalparty
-```
-> OBS: ".../" TRATA-SE DO DIRETORIO AONDE O REPOSITORIO FOI CLONADO. *Ex: /home/usuario/Downloads/animalparty* 
----- 
 **EXECUTE O ARQUIVO main.py**🐍
 ```
-python3 main.py
+python3 animalparty/main.py 
 ```
+>OBS.: Necessário ter o [python](https://www.python.org/downloads/) instalado na máquina, em sua versão 3.x.
 ----
