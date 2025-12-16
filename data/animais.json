@@ -24,5 +24,18 @@
         "status": "disponivel",
         "dataEntrada": "2025-12-15T01:39:06.030263",
         "dataAdocao": "2025-12-15T02:02:50.508713"
+    },
+    {
+        "id": 3,
+        "especie": "cachorro",
+        "raca": "poodle",
+        "nome": "Kel",
+        "sexo": "macho",
+        "idadeMeses": 56,
+        "porte": "grande",
+        "temperamento": "agitado",
+        "status": "disponivel",
+        "dataEntrada": "2025-12-16T12:38:01.419504",
+        "dataAdocao": "2025-12-16T12:40:22.281581"
     }
 ]

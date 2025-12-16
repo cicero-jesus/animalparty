@@ -122,5 +122,40 @@
         ],
         "animaisReservados": [],
         "animaisAdotados": []
+    },
+    {
+        "id": 4,
+        "nome": "Diogo Gomes",
+        "idade": 24,
+        "moradia": "casa",
+        "areaUtil": 25.0,
+        "experienciaPets": false,
+        "criancasEmCasa": false,
+        "outrosAnimais": false,
+        "elegivel": true,
+        "ptsCompatib": 88,
+        "historico": [
+            "Elegibilidade: Aprovado",
+            "Elegibilidade: Aprovado",
+            "Compatibilidade com Kel: 88",
+            {
+                "evento": "reserva",
+                "animalId": 3,
+                "data": "2025-12-16T12:39:46.194805"
+            },
+            {
+                "evento": "adoção efetivada",
+                "animalId": 3,
+                "data": "2025-12-16T12:40:22.281581"
+            },
+            {
+                "evento": "devolução",
+                "animalId": 3,
+                "motivo": "Ele merece alguem melhor do que eu",
+                "data": "2025-12-16T12:40:56.609936"
+            }
+        ],
+        "animaisReservados": [],
+        "animaisAdotados": []
     }
 ]

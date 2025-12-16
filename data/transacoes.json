@@ -66,5 +66,22 @@
             "data": "2025-12-15T02:02:50.508827",
             "termos": "O adotante se compromete a cuidar do animal..."
         }
+    },
+    {
+        "id": "3f4cca69-0c69-4830-ba2b-d7a58cac6c23",
+        "animalId": 3,
+        "adotanteId": 4,
+        "dataReserva": "2025-12-16T12:39:46.194805",
+        "dataExpiracaoReserva": "2025-12-19T12:39:46.194805",
+        "dataAdocao": "2025-12-16T12:40:22.281581",
+        "dataDevolucao": "2025-12-16T12:40:56.609936",
+        "motivoDevolucao": "Ele merece alguem melhor do que eu",
+        "contrato": {
+            "contratoId": "95558194-f9e7-4679-a9ca-5c14525dda16",
+            "animalId": 3,
+            "adotanteId": 4,
+            "data": "2025-12-16T12:40:22.281752",
+            "termos": "O adotante se compromete a cuidar do animal..."
+        }
     }
 ]
